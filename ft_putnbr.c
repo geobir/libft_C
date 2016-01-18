@@ -14,11 +14,6 @@
 
 void	ft_putnbr(int n)
 {
-	if (n < 0)
-	{
-		n *= -1;
-		write(1, "-", 1);
-	}
-	while (ft_numlen(n))
-		ft_putchar(n + '0');
+
+	ft_putnbr_fd(n, 1);
 }
