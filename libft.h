@@ -20,9 +20,7 @@
 #define TRUE 1
 #define FALSE 0
 
-/*
-** Partie I
-*/
+
 	void	*ft_memset(void *b, int c, size_t len);
 	void	ft_bzero(void *s, size_t n);
 	void	*ft_memcpy(void *s1, const void *s2, size_t n);
@@ -53,9 +51,7 @@
 	int		ft_toupper(int c);
 	int		ft_tolower(int c);
 
-/*
-** Partie II
-*/
+
 	void	ft_putchar(char c);
 	void	ft_putstr(char const *s);
 	void	ft_putnbr(int n);
@@ -81,9 +77,7 @@
 	void	ft_putnbr_fd(int n, int fd);
 	void	ft_striteri(char *s, void (*f)(unsigned int,char *));
 
-/*
-** Partie perso
-*/
+
 	void	ft_strend(char **str);
 	void	ft_strcon(char **str, size_t n);
 	size_t	ft_puiss(size_t i, size_t x);
@@ -95,14 +89,12 @@
 	size_t	ft_strnextc(char* s,char c);
 	int		ft_numabs(int i);
 
-/*
-** Partie BONUS
-*/
-typedef struct s_list
+
+typedef struct	s_list
 {
-	void *content;
-	size_t content_size;
-	struct s_list *next;
-} t_list;
+	void		*content;
+	size_t		content_size;
+	struct		s_list *next;
+}				t_list;
 
 #endif

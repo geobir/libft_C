@@ -32,8 +32,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	{
 		if (save != 1)
 		{
-			*d = *s;
-			++d;
+			*(d++) = *s;
 			save--;
 		}
 		++s;

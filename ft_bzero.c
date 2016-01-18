@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 
 	t = (char*)s;
 	while (n != 0)
-    {
+	{
 		*t++ = 0;
 		n--;
 	}
