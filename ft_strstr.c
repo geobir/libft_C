@@ -11,52 +11,24 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-char	*ft_strstr(const char *s1, const char *s2)
+
+char		*ft_strstr(const char *s1, const char *s2)
 {
-	char	*ss2;
-	char	*ss1;
-	char	*save;
+	char	c;
+	char	sc;
+	size_t	len;
 
-	ss1 = (char*)s1;
-	ss2 = (char*)s2;
-	save = ss1;
-	while (*ss1 != '\0')
+	if ((c = *s2++) != 0)
 	{
-		if (*ss2 == *ss1)
+		len = ft_strlen(s2);
+		while (42)
 		{
-			if (ss2 == (char*)s2)
-				save = ss1;
-			++ss2;
+			if ((sc = *s1++) == 0)
+				return (NULL);
+			if (sc == c && ft_strncmp(s1, s2, len) == 0)
+				break ;
 		}
-		else
-		{
-			ss2 = (char*)s2;
-		}
-		if (*ss2 == '\0')
-			return (save);
-		++ss1;
+		--s1;
 	}
-	return (0);
-}*/
-
-char	*ft_strstr(const char *s1, const char *s2)
-{
-	size_t	i1;
-	size_t	i2;
-
-	if (!(ft_strlen((char *)s2)))
-		return ((char *)s1);
-	i1 = 0;
-	i2 = 0;
-	while (i1 < ft_strlen((char *)s1))
-	{
-		while (s1[i1 + i2] == s2[i2])
-			i2++;
-		if (i2 >= ft_strlen((char *)s2))
-			return ((char *)&s1[i1]);
-		i1++;
-		i2 = 0;
-	}
-	return (NULL);
+	return ((char *)s1);
 }
