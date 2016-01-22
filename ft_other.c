@@ -109,6 +109,8 @@ int		ft_numlen(int c)
 	int		i;
 
 	i = 0;
+	if (c == 0)
+		return (1);
 	while (c)
 	{
 		c = c / 10;
