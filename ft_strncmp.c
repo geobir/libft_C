@@ -22,11 +22,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 		++s1;
 		++s2;
 	}
-	if (n == 0)
+	if (n == 0 || *(unsigned char *)s1 == *(unsigned char *)s2)
 		return (0);
-	if (*s1 > *s2)
-		return (1);
-	if (*s1 < *s2)
-		return (-1);
-	return (0);
+	return ((*(unsigned char *)s1 < *(unsigned char *)s2) ? -1 : +1);
 }
