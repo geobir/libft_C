@@ -23,7 +23,20 @@ void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 	{
 		*ss1++ = *ss2;
 		if (*ss2++ == c)
-			return (ss1);
+			return ((void*)ss1);
 	}
 	return (0);
 }
+/*
+void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
+{
+	if (n) {
+		register unsigned char *tp = s1;
+		register const unsigned char *fp = s2;
+		do {
+			if ((*tp++ = *fp++) == c)
+				return (s1);
+		} while (--n != 0);
+	}
+	return (0);
+}*/
