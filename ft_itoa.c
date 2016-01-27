@@ -29,16 +29,19 @@ char			*ft_itoa(int n)
 	i = ft_numlen(n);
 	if (n < 0)
 	{
-		s = (char*)malloc(sizeof(char) * (i + 2));
+		if (!(s = (char*)malloc(sizeof(char) * (i + 2))))
+			return (NULL);
 		*s = '-';
 		s[i + 1] = 0;
 		s_itoa(n, i, &s, 1);
 	}
 	else
 	{
-		s = (char*)malloc(sizeof(char) * (i + 1));
+		if (!(s = (char*)malloc(sizeof(char) * (i + 1))))
+			return (NULL);
 		s[i] = 0;
 		s_itoa(n, i - 1, &s, 0);
+		
 	}
 	return (s);
 }
