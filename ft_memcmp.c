@@ -28,7 +28,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 		++ss1;
 		++ss2;
 		if (--n == 0)
-			break;
+			break ;
 	}
 	return (0);
 }

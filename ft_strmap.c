@@ -19,7 +19,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	if (s && f)
 	{
-		save = (char*)malloc(sizeof(char) * ft_strlen(s));
+		save = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1));
+		if (!save)
+			return (NULL);
 		ret = save;
 		while (*s != '\0')
 			*save++ = f(*s++);

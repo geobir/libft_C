@@ -27,6 +27,7 @@ void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 	}
 	return (0);
 }
+
 /*
 void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 {
@@ -39,4 +40,5 @@ void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 		} while (--n != 0);
 	}
 	return (0);
-}*/
+}
+*/

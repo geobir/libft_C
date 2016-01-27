@@ -17,21 +17,18 @@ char	*ft_strtrim(char const *s)
 	char	*save;
 	int		i;
 
-	if (s)
-	{
-		i = 0;
-		while (ft_iswhispa(*s))
-			++s;
-		save = (char*)malloc(sizeof(char) * ft_strlen(s));
-		if (save != NULL)
-		{
-			while (*s != '\0')
-				save[i++] = *s++;
-			save[i] = '\0';
-			while ((ft_iswhispa(save[i]) || save[i] == '\0') && i >= 0)
-				save[i--] = '\0';
-			return (save);
-		}
-	}
-	return (0);
+	if (!s)
+		return (NULL);
+	i = 0;
+	while (ft_iswhispa(*s))
+		++s;
+	save = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!save)
+		return (NULL);
+	while (*s != '\0')
+		save[i++] = *s++;
+	save[i] = '\0';
+	while ((ft_iswhispa(save[i]) || save[i] == '\0') && i >= 0)
+		save[i--] = '\0';
+	return (save);
 }
